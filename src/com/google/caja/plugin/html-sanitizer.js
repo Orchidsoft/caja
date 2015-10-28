@@ -346,7 +346,7 @@ var html = (function(html4) {
             }
             pos++;
           } else {
-            if (h.pcdata) { h.pcdata("&amp;", param, continuationMarker,
+            if (h.pcdata) { h.pcdata("&", param, continuationMarker,
                 continuationMaker(h, parts, pos, state, param));
             }
           }
@@ -398,7 +398,7 @@ var html = (function(html4) {
             }
           } else {
             if (h.pcdata) {
-              h.pcdata('&lt;', param, continuationMarker,
+              h.pcdata('<', param, continuationMarker,
                 continuationMaker(h, parts, pos, state, param));
             }
           }
@@ -482,7 +482,7 @@ var html = (function(html4) {
           break;
         case '>':
           if (h.pcdata) {
-            h.pcdata("&gt;", param, continuationMarker,
+            h.pcdata(">", param, continuationMarker,
               continuationMaker(h, parts, pos, state, param));
           }
           break;
